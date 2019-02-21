@@ -1,0 +1,22 @@
+<!-- Homepage -->
+
+{% extends 'base.html' %}
+	{% block content %}
+
+		  <h1>Date Night</h1>
+
+		  <form action="/date-type" method="POST">
+		  	<p>What type of date do you want to plan?</p>
+		  	<div>
+		  		<input id="date-type-1" type="radio" name="date-type" value="out">
+		  			<label for="out">Wild night out!</label>
+		  		<input id="date-type-2" type="radio" name="date-type" value="in">
+		  			<label for="in"> Stay in and relax...</label>
+		  	</div>
+		  	<div>
+		  		<br>
+		  		<button type="submit">Let the good times roll!</button>
+		  	</div>
+		  </form>
+
+	{% endblock %}

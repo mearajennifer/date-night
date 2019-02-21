@@ -1,0 +1,19 @@
+<!-- Base template for html pages -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    <title>Date Night</title>
+	</head>
+	
+	<body>
+		{% for flash in get_flashed_messages() %}
+		  {{ flash }}
+		{% endfor %}
+
+		{% block content %}
+		  Put your body here.
+		{% endblock %}
+	</body>
+
+</html>

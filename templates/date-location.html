@@ -1,0 +1,23 @@
+<!-- Date Night Out: Choose date and location -->
+
+{% extends 'base.html' %}
+	{% block content %}
+
+		  <h1>Where & When?</h1>
+
+		  <form action="/date-location" method="POST">
+		  	<p>When do you want to go out?</p>
+		  	<div>
+				<input type="date" id="date" name="calendar-date" value="2019-02-21">
+		  	</div>
+		  	<p>What city?</p>
+		  	<div>
+		  		<input type="text" name="location">
+		  	</div>
+		  	<div>
+		  		<br>
+		  		<button type="submit">Let the good times roll!</button>
+		  	</div>
+		  </form>
+
+	{% endblock %}
