@@ -4,10 +4,14 @@
 from jinja2 import StrictUndefined
 from flask import Flask, render_template, request, flash, redirect, session
 from flask_debugtoolbar import DebugToolbarExtension
+import os
+
+# import API code from lib
+# from lib import yahoo_weather
 
 # Basic app setup
 app = Flask(__name__)
-app.secret_key = "Saturday Night"
+app.secret_key = os.environ['FLASK_SECRET_KEY']
 app.jinja_env.undefined = StrictUndefined
 
 
